@@ -7,7 +7,7 @@
   <b>Description:</b>
   <%=h @project.description %>
 </p>
-
+<%= render :partial=>"problems_list", :locals=>{ :problems=>@project.problems } %>
 <%= render :partial=>"new_problem", :locals=>{ :problem=> Problem.new( :project_id=> @project.id) } %>
 
 

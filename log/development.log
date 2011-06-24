@@ -186,3 +186,274 @@ Migrating to CreateProblems (20110624130022)
   [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
   [4;36;1mSQL (56.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110624130022')[0m
   [4;35;1mSQL (68.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110624125900')[0m
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-06-24 15:14:51) [GET]
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 31ms (View: 3, DB: 2) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 15:15:35) [GET]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 86ms (View: 59, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2011-06-24 15:15:36) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 36ms (View: 23, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2011-06-24 15:15:39) [POST]
+  Parameters: {"commit"=>"Create", "project"=>{"name"=>"p1", "description"=>""}, "authenticity_token"=>"1mLpLmplVeWdVm6jWH63qAEVH1GY0J1FpEcBKKzShws="}
+  [4;35;1mProject Create (1.0ms)[0m   [0mINSERT INTO "projects" ("name", "updated_at", "description", "created_at") VALUES('p1', '2011-06-24 13:15:39', '', '2011-06-24 13:15:39')[0m
+Redirected to http://localhost:3000/projects/1
+Completed in 86ms (DB: 1) | 302 Found [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2011-06-24 15:15:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+Rendered projects/_new_problem (8.8ms)
+Completed in 50ms (View: 37, DB: 0) | 200 OK [http://localhost/projects/1]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2011-06-24 15:15:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1mLpLmplVeWdVm6jWH63qAEVH1GY0J1FpEcBKKzShws=", "problem"=>{"name"=>"name of problem", "project_id"=>"1", "description"=>"opis"}}
+  [4;35;1mProblem Create (0.8ms)[0m   [0mINSERT INTO "problems" ("name", "project_id", "updated_at", "description", "created_at") VALUES('name of problem', 1, '2011-06-24 13:15:49', 'opis', '2011-06-24 13:15:49')[0m
+Redirected to http://localhost:3000/problems/1
+Completed in 85ms (DB: 1) | 302 Found [http://localhost/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2011-06-24 15:15:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProblem Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 1) [0m
+Rendering template within layouts/problems
+Rendering problems/show
+Completed in 39ms (View: 26, DB: 1) | 200 OK [http://localhost/problems/1]
+
+
+Processing ProblemsController#index (for 127.0.0.1 at 2011-06-24 15:15:50) [GET]
+  [4;35;1mProblem Load (0.8ms)[0m   [0mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+Completed in 38ms (View: 28, DB: 1) | 200 OK [http://localhost/problems]
+
+
+Processing ProblemsController#new (for 127.0.0.1 at 2011-06-24 15:15:57) [GET]
+
+ActionView::MissingTemplate (Missing template problems/new.erb in view path app/views):
+  app/controllers/problems_controller.rb:29:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 15:16:04) [GET]
+  [4;36;1mProject Load (0.9ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 24ms (View: 12, DB: 1) | 200 OK [http://localhost/projects]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (114.7ms)[0m   [0;1mCREATE TABLE "problems" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "project_id" integer, "name" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (103.6ms)[0m   [0;1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (110.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (112.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (45.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110624130022')[0m
+  [4;35;1mSQL (45.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110624125900')[0m
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2011-06-24 15:20:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+Rendered projects/_new_problem (8.1ms)
+Completed in 50ms (View: 35, DB: 0) | 200 OK [http://localhost/projects/1]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 15:20:11) [GET]
+  [4;36;1mProject Load (0.9ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 15:21:30) [GET]
+  [4;35;1mProject Load (1.5ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 44ms (View: 30, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2011-06-24 15:21:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (16.7ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;35;1mProblem Load (0.6ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".project_id = 1) [0m
+Rendered projects/_problems_list (18.4ms)
+Rendered projects/_new_problem (71.7ms)
+Completed in 141ms (View: 111, DB: 17) | 200 OK [http://localhost/projects/1]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2011-06-24 15:21:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProblem Load (0.6ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 1) [0m
+Rendering template within layouts/problems
+Rendering problems/show
+Completed in 27ms (View: 12, DB: 1) | 200 OK [http://localhost/problems/1]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 15:21:37) [GET]
+  [4;35;1mProject Load (0.8ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2011-06-24 15:21:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;35;1mProblem Load (0.6ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".project_id = 1) [0m
+Rendered projects/_problems_list (20.7ms)
+Rendered projects/_new_problem (6.5ms)
+Completed in 51ms (View: 38, DB: 1) | 200 OK [http://localhost/projects/1]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2011-06-24 15:21:44) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1mLpLmplVeWdVm6jWH63qAEVH1GY0J1FpEcBKKzShws=", "problem"=>{"name"=>"problem 2", "project_id"=>"1", "description"=>"meh"}}
+  [4;36;1mProblem Create (0.7ms)[0m   [0;1mINSERT INTO "problems" ("name", "project_id", "updated_at", "description", "created_at") VALUES('problem 2', 1, '2011-06-24 13:21:44', 'meh', '2011-06-24 13:21:44')[0m
+Redirected to http://localhost:3000/problems/2
+Completed in 70ms (DB: 1) | 302 Found [http://localhost/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2011-06-24 15:21:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProblem Load (0.5ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 2) [0m
+Rendering template within layouts/problems
+Rendering problems/show
+Completed in 17ms (View: 5, DB: 1) | 200 OK [http://localhost/problems/2]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 15:21:46) [GET]
+  [4;36;1mProject Load (0.9ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 36ms (View: 14, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2011-06-24 15:21:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 1) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;36;1mProblem Load (0.7ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".project_id = 1) [0m
+Rendered projects/_problems_list (47.1ms)
+Rendered projects/_new_problem (5.6ms)
+Completed in 91ms (View: 63, DB: 1) | 200 OK [http://localhost/projects/1]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 15:21:51) [GET]
+  [4;35;1mProject Load (0.8ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 26ms (View: 12, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2011-06-24 15:21:52) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 20ms (View: 8, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2011-06-24 15:21:56) [POST]
+  Parameters: {"commit"=>"Create", "project"=>{"name"=>"p2", "description"=>"opis"}, "authenticity_token"=>"1mLpLmplVeWdVm6jWH63qAEVH1GY0J1FpEcBKKzShws="}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "updated_at", "description", "created_at") VALUES('p2', '2011-06-24 13:21:56', 'opis', '2011-06-24 13:21:56')[0m
+Redirected to http://localhost:3000/projects/2
+Completed in 72ms (DB: 1) | 302 Found [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2011-06-24 15:21:56) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 2) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;36;1mProblem Load (0.3ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".project_id = 2) [0m
+Rendered projects/_problems_list (1.2ms)
+Rendered projects/_new_problem (12.6ms)
+Completed in 131ms (View: 111, DB: 1) | 200 OK [http://localhost/projects/2]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2011-06-24 15:22:03) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1mLpLmplVeWdVm6jWH63qAEVH1GY0J1FpEcBKKzShws=", "problem"=>{"name"=>"problem 1 proj 2", "project_id"=>"2", "description"=>"opis"}}
+  [4;35;1mProblem Create (0.7ms)[0m   [0mINSERT INTO "problems" ("name", "project_id", "updated_at", "description", "created_at") VALUES('problem 1 proj 2', 2, '2011-06-24 13:22:03', 'opis', '2011-06-24 13:22:03')[0m
+Redirected to http://localhost:3000/problems/3
+Completed in 100ms (DB: 1) | 302 Found [http://localhost/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2011-06-24 15:22:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mProblem Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 3) [0m
+Rendering template within layouts/problems
+Rendering problems/show
+Completed in 22ms (View: 5, DB: 1) | 200 OK [http://localhost/problems/3]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 15:22:05) [GET]
+  [4;35;1mProject Load (1.0ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 33ms (View: 18, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2011-06-24 15:22:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 2) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;35;1mProblem Load (0.6ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".project_id = 2) [0m
+Rendered projects/_problems_list (11.5ms)
+Rendered projects/_new_problem (11.2ms)
+Completed in 59ms (View: 46, DB: 1) | 200 OK [http://localhost/projects/2]

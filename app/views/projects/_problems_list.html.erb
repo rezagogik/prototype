@@ -7,7 +7,7 @@
     <th>Description</th>
   </tr>
 
-<% @problems.each do |problem| %>
+<% problems.each do |problem| %>
   <tr>
     <td><%=h problem.project_id %></td>
     <td><%=h problem.name %></td>
@@ -20,5 +20,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New problem', new_problem_path %>

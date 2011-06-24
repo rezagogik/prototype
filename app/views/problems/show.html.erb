@@ -4,6 +4,11 @@
 </p>
 
 <p>
+  <b>Problem:</b>
+  <%=h @problem.problem_id %>
+</p>
+
+<p>
   <b>Name:</b>
   <%=h @problem.name %>
 </p>
@@ -12,6 +17,9 @@
   <b>Description:</b>
   <%=h @problem.description %>
 </p>
+
+<%= render :partial=>"problems_list", :locals=>{ :podproblems=>@problem.problems } %>
+<%= render :partial=>"new_problem", :locals=>{ :podproblem=> Problem.new( :problem_id=> @problem.id ) } %>
 
 
 <%= link_to 'Edit', edit_problem_path(@problem) %> |

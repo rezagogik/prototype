@@ -2,11 +2,11 @@
 
 <% form_for(podproblem) do |f| %>
   <%= f.error_messages %>
-  <%= f.hidden_field :project_id %>
+  <%= f.hidden_field :problem_id %>
 
   <p>
-    <%= f.label :project_id %><br />
-    <%= f.text_field :project_id %>
+    <%= f.label :problem_id %><br />
+    <%= f.text_field :problem_id %>
   </p>
   <p>
     <%= f.label :name %><br />

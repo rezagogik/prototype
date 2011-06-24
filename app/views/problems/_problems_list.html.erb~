@@ -2,14 +2,14 @@
 
 <table>
   <tr>
-    <th>Project</th>
+    <th>UnderProblem</th>
     <th>Name</th>
     <th>Description</th>
   </tr>
 
-<% problems.each do |problem| %>
+<% podproblems.each do |problem| %>
   <tr>
-    <td><%=h problem.project_id %></td>
+    <td><%=h problem.problem_id %></td>
     <td><%=h problem.name %></td>
     <td><%=h problem.description %></td>
     <td><%= link_to 'Show', problem %></td>

@@ -2,6 +2,7 @@
 
 <% form_for(@problem) do |f| %>
   <%= f.error_messages %>
+  <%= f.hidden_field :project_id %>
 
   <p>
     <%= f.label :project_id %><br />
@@ -19,5 +20,3 @@
     <%= f.submit 'Create' %>
   </p>
 <% end %>
-
-<%= link_to 'Back', problems_path %>

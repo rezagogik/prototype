@@ -175,3 +175,314 @@ Processing ProjectsController#update (for 0.0.0.0 at 2011-06-24 15:00:37) [PUT]
   [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
 Redirected to http://test.host/projects/980190962
 Completed in 5ms (DB: 1) | 302 Found [http://test.host/projects/980190962?]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" [0m
+
+
+Processing ProblemsController#create (for 0.0.0.0 at 2011-06-24 15:11:01) [POST]
+  Parameters: {"problem"=>{}}
+  [4;35;1mProblem Create (0.6ms)[0m   [0mINSERT INTO "problems" ("name", "project_id", "updated_at", "description", "created_at") VALUES(NULL, NULL, '2011-06-24 13:11:01', NULL, '2011-06-24 13:11:01')[0m
+Redirected to http://test.host/problems/980190963
+Completed in 12ms (DB: 3) | 302 Found [http://test.host/problems?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" [0m
+  [4;36;1mProblem Load (0.4ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+
+
+Processing ProblemsController#destroy (for 0.0.0.0 at 2011-06-24 15:11:01) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mProblem Load (0.5ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+  [4;36;1mProblem Destroy (0.6ms)[0m   [0;1mDELETE FROM "problems" WHERE "id" = 980190962[0m
+Redirected to http://test.host/problems
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/problems/980190962]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" [0m
+  [4;36;1mProblem Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+
+
+Processing ProblemsController#edit (for 0.0.0.0 at 2011-06-24 15:11:01) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mProblem Load (0.5ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+Rendering template within layouts/problems
+Rendering problems/edit
+Completed in 15ms (View: 13, DB: 1) | 200 OK [http://test.host/problems/980190962/edit]
+
+
+Processing ProblemsController#index (for 0.0.0.0 at 2011-06-24 15:11:01) [GET]
+  [4;36;1mProblem Load (0.7ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+Completed in 15ms (View: 13, DB: 1) | 200 OK [http://test.host/problems]
+
+
+Processing ProblemsController#new (for 0.0.0.0 at 2011-06-24 15:11:01) [GET]
+  [4;35;1mProblem Load (0.5ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+
+
+Processing ProblemsController#show (for 0.0.0.0 at 2011-06-24 15:11:01) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mProblem Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+Rendering template within layouts/problems
+Rendering problems/show
+Completed in 76ms (View: 74, DB: 1) | 200 OK [http://test.host/problems/980190962]
+  [4;35;1mProblem Load (0.6ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+
+
+Processing ProblemsController#update (for 0.0.0.0 at 2011-06-24 15:11:02) [PUT]
+  Parameters: {"id"=>"980190962", "problem"=>{}}
+  [4;36;1mProblem Load (0.6ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+Redirected to http://test.host/problems/980190962
+Completed in 5ms (DB: 1) | 302 Found [http://test.host/problems/980190962?]
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" [0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2011-06-24 15:11:02) [POST]
+  Parameters: {"project"=>{}}
+  [4;36;1mProject Create (0.8ms)[0m   [0;1mINSERT INTO "projects" ("name", "updated_at", "description", "created_at") VALUES(NULL, '2011-06-24 13:11:02', NULL, '2011-06-24 13:11:02')[0m
+Redirected to http://test.host/projects/980190963
+Completed in 12ms (DB: 1) | 302 Found [http://test.host/projects?]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "projects" [0m
+  [4;35;1mProject Load (0.4ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2011-06-24 15:11:02) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+  [4;35;1mProject Destroy (0.5ms)[0m   [0mDELETE FROM "projects" WHERE "id" = 980190962[0m
+Redirected to http://test.host/projects
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/projects/980190962]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "projects" [0m
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2011-06-24 15:11:02) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+Rendering template within layouts/projects
+Rendering projects/edit
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://test.host/projects/980190962/edit]
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2011-06-24 15:11:02) [GET]
+  [4;35;1mProject Load (0.7ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 16ms (View: 14, DB: 1) | 200 OK [http://test.host/projects]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2011-06-24 15:11:02) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2011-06-24 15:11:02) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+ERROR: compiling _run_erb_app47views47projects47show46html46erb RAISED compile error
+/home/ground/rails/proj2/prototype/app/views/projects/show.html.erb:14: syntax error, unexpected '<', expecting ')'
+<%= link_to 'Edit', edit_projec...
+ ^
+/home/ground/rails/proj2/prototype/app/views/projects/show.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+Function body:           def _run_erb_app47views47projects47show46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Name:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.name ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "<p>\n"
+@output_buffer.concat "  <b>Description:</b>\n"
+@output_buffer.concat "  "; @output_buffer.concat((h @project.description ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</p>\n"
+@output_buffer.concat "\n"
+@output_buffer.concat(( render :partial=>"new_problem", :locals=>{ :problem=> Problem.new( :project_id=> @project.id) }
+
+
+<%= link_to 'Edit', edit_project_path(@project) ).to_s); @output_buffer.concat " |\n"
+@output_buffer.concat(( link_to 'Back', projects_path ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/ground/rails/proj2/prototype/app/views/projects/show.html.erb:18:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render_without_template_tracking'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/test_case.rb:20:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:175:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/ground/rails/proj2/prototype/app/controllers/projects_controller.rb:18:in `show'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:567:in `process_with_test'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:447:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/test_process.rb:398:in `get'
+./test/functional/projects_controller_test.rb:24:in `test_should_show_project'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `__send__'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/testing/setup_and_teardown.rb:62:in `run'
+/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/usr/lib/ruby/1.8/test/unit/testsuite.rb:34:in `run'
+/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `each'
+/usr/lib/ruby/1.8/test/unit/testsuite.rb:33:in `run'
+/usr/lib/ruby/1.8/test/unit/ui/testrunnermediator.rb:46:in `run_suite'
+/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:67:in `start_mediator'
+/usr/lib/ruby/1.8/test/unit/ui/console/testrunner.rb:41:in `start'
+/usr/lib/ruby/1.8/test/unit/ui/testrunnerutilities.rb:29:in `run'
+/usr/lib/ruby/1.8/test/unit/autorunner.rb:216:in `run'
+/usr/lib/ruby/1.8/test/unit/autorunner.rb:12:in `run'
+/usr/lib/ruby/1.8/test/unit.rb:278
+/usr/lib/ruby/gems/1.8/gems/rake-0.8.7/lib/rake/rake_test_loader.rb:5
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2011-06-24 15:11:02) [PUT]
+  Parameters: {"project"=>{}, "id"=>"980190962"}
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+Redirected to http://test.host/projects/980190962
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/projects/980190962?]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" [0m
+
+
+Processing ProblemsController#create (for 0.0.0.0 at 2011-06-24 15:11:49) [POST]
+  Parameters: {"problem"=>{}}
+  [4;35;1mProblem Create (0.6ms)[0m   [0mINSERT INTO "problems" ("name", "project_id", "updated_at", "description", "created_at") VALUES(NULL, NULL, '2011-06-24 13:11:49', NULL, '2011-06-24 13:11:49')[0m
+Redirected to http://test.host/problems/980190963
+Completed in 11ms (DB: 3) | 302 Found [http://test.host/problems?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "problems" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" [0m
+  [4;36;1mProblem Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+
+
+Processing ProblemsController#destroy (for 0.0.0.0 at 2011-06-24 15:11:49) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mProblem Load (0.5ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+  [4;36;1mProblem Destroy (0.5ms)[0m   [0;1mDELETE FROM "problems" WHERE "id" = 980190962[0m
+Redirected to http://test.host/problems
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/problems/980190962]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "problems" [0m
+  [4;36;1mProblem Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+
+
+Processing ProblemsController#edit (for 0.0.0.0 at 2011-06-24 15:11:49) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mProblem Load (0.5ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+Rendering template within layouts/problems
+Rendering problems/edit
+Completed in 26ms (View: 24, DB: 1) | 200 OK [http://test.host/problems/980190962/edit]
+
+
+Processing ProblemsController#index (for 0.0.0.0 at 2011-06-24 15:11:49) [GET]
+  [4;36;1mProblem Load (0.7ms)[0m   [0;1mSELECT * FROM "problems" [0m
+Rendering template within layouts/problems
+Rendering problems/index
+Completed in 19ms (View: 17, DB: 1) | 200 OK [http://test.host/problems]
+
+
+Processing ProblemsController#new (for 0.0.0.0 at 2011-06-24 15:11:49) [GET]
+  [4;35;1mProblem Load (0.6ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+
+
+Processing ProblemsController#show (for 0.0.0.0 at 2011-06-24 15:11:49) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mProblem Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+Rendering template within layouts/problems
+Rendering problems/show
+Completed in 78ms (View: 76, DB: 1) | 200 OK [http://test.host/problems/980190962]
+  [4;35;1mProblem Load (0.6ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+
+
+Processing ProblemsController#update (for 0.0.0.0 at 2011-06-24 15:11:49) [PUT]
+  Parameters: {"id"=>"980190962", "problem"=>{}}
+  [4;36;1mProblem Load (0.5ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 980190962) [0m
+Redirected to http://test.host/problems/980190962
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/problems/980190962?]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" [0m
+
+
+Processing ProjectsController#create (for 0.0.0.0 at 2011-06-24 15:11:49) [POST]
+  Parameters: {"project"=>{}}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "updated_at", "description", "created_at") VALUES(NULL, '2011-06-24 13:11:49', NULL, '2011-06-24 13:11:49')[0m
+Redirected to http://test.host/projects/980190963
+Completed in 12ms (DB: 1) | 302 Found [http://test.host/projects?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "projects" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "projects" [0m
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+
+
+Processing ProjectsController#destroy (for 0.0.0.0 at 2011-06-24 15:11:49) [DELETE]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+  [4;35;1mProject Destroy (0.9ms)[0m   [0mDELETE FROM "projects" WHERE "id" = 980190962[0m
+Redirected to http://test.host/projects
+Completed in 4ms (DB: 3) | 302 Found [http://test.host/projects/980190962]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "projects" [0m
+  [4;35;1mProject Load (0.7ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+
+
+Processing ProjectsController#edit (for 0.0.0.0 at 2011-06-24 15:11:49) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mProject Load (1.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+Rendering template within layouts/projects
+Rendering projects/edit
+Completed in 14ms (View: 11, DB: 3) | 200 OK [http://test.host/projects/980190962/edit]
+
+
+Processing ProjectsController#index (for 0.0.0.0 at 2011-06-24 15:11:49) [GET]
+  [4;35;1mProject Load (0.8ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 17ms (View: 15, DB: 1) | 200 OK [http://test.host/projects]
+
+
+Processing ProjectsController#new (for 0.0.0.0 at 2011-06-24 15:11:49) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/projects/new]
+  [4;36;1mProject Load (0.6ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+
+
+Processing ProjectsController#show (for 0.0.0.0 at 2011-06-24 15:11:49) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+Rendered projects/_new_problem (8.2ms)
+Completed in 15ms (View: 13, DB: 1) | 200 OK [http://test.host/projects/980190962]
+  [4;36;1mProject Load (0.5ms)[0m   [0;1mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+
+
+Processing ProjectsController#update (for 0.0.0.0 at 2011-06-24 15:11:49) [PUT]
+  Parameters: {"project"=>{}, "id"=>"980190962"}
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 980190962) [0m
+Redirected to http://test.host/projects/980190962
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/projects/980190962?]

@@ -2519,3 +2519,88 @@ Completed in 14ms (View: 3, DB: 1) | 200 OK [http://localhost/projects]
   [4;36;1mSQL (57.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110624134348')[0m
   [4;35;1mSQL (67.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20110624130022')[0m
   [4;36;1mSQL (67.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20110624125900')[0m
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 16:45:05) [GET]
+  [4;35;1mProject Load (0.6ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 15ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ProjectsController#new (for 127.0.0.1 at 2011-06-24 17:16:02) [GET]
+Rendering template within layouts/projects
+Rendering projects/new
+Completed in 21ms (View: 9, DB: 0) | 200 OK [http://localhost/projects/new]
+
+
+Processing ProjectsController#create (for 127.0.0.1 at 2011-06-24 17:16:08) [POST]
+  Parameters: {"commit"=>"Create", "project"=>{"name"=>"p1", "description"=>"opis"}, "authenticity_token"=>"1mLpLmplVeWdVm6jWH63qAEVH1GY0J1FpEcBKKzShws="}
+  [4;36;1mProject Create (0.6ms)[0m   [0;1mINSERT INTO "projects" ("name", "updated_at", "description", "created_at") VALUES('p1', '2011-06-24 15:16:08', 'opis', '2011-06-24 15:16:08')[0m
+Redirected to http://localhost:3000/projects/6
+Completed in 101ms (DB: 1) | 302 Found [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2011-06-24 17:16:08) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 6) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;36;1mProblem Load (0.3ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".project_id = 6) [0m
+Rendered projects/_problems_list (1.2ms)
+Rendered projects/_new_problem (7.1ms)
+Completed in 40ms (View: 25, DB: 1) | 200 OK [http://localhost/projects/6]
+
+
+Processing ProblemsController#create (for 127.0.0.1 at 2011-06-24 17:16:17) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"1mLpLmplVeWdVm6jWH63qAEVH1GY0J1FpEcBKKzShws=", "problem"=>{"name"=>"problem", "project_id"=>"6", "description"=>"opis"}}
+  [4;35;1mProblem Create (0.6ms)[0m   [0mINSERT INTO "problems" ("name", "project_id", "updated_at", "problem_id", "description", "created_at") VALUES('problem', 6, '2011-06-24 15:16:17', NULL, 'opis', '2011-06-24 15:16:17')[0m
+Redirected to http://localhost:3000/problems/21
+Completed in 71ms (DB: 1) | 302 Found [http://localhost/problems]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2011-06-24 17:16:17) [GET]
+  Parameters: {"id"=>"21"}
+  [4;36;1mProblem Load (0.6ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems"."id" = 21) [0m
+Rendering template within layouts/problems
+Rendering problems/show
+  [4;35;1mProblem Load (0.3ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems".problem_id = 21) [0m
+Rendered problems/_problems_list (1.5ms)
+Rendered problems/_new_problem (6.5ms)
+Completed in 32ms (View: 16, DB: 1) | 200 OK [http://localhost/problems/21]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 17:16:21) [GET]
+  [4;36;1mProject Load (0.8ms)[0m   [0;1mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 24ms (View: 12, DB: 1) | 200 OK [http://localhost/projects]
+
+
+Processing ProjectsController#show (for 127.0.0.1 at 2011-06-24 17:16:23) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mProject Load (0.5ms)[0m   [0mSELECT * FROM "projects" WHERE ("projects"."id" = 6) [0m
+Rendering template within layouts/projects
+Rendering projects/show
+  [4;36;1mProblem Load (0.6ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".project_id = 6) [0m
+Rendered projects/_problems_list (13.4ms)
+Rendered projects/_new_problem (5.4ms)
+Completed in 45ms (View: 31, DB: 1) | 200 OK [http://localhost/projects/6]
+
+
+Processing ProblemsController#show (for 127.0.0.1 at 2011-06-24 17:16:26) [GET]
+  Parameters: {"id"=>"21"}
+  [4;35;1mProblem Load (0.5ms)[0m   [0mSELECT * FROM "problems" WHERE ("problems"."id" = 21) [0m
+Rendering template within layouts/problems
+Rendering problems/show
+  [4;36;1mProblem Load (0.3ms)[0m   [0;1mSELECT * FROM "problems" WHERE ("problems".problem_id = 21) [0m
+Rendered problems/_problems_list (1.2ms)
+Rendered problems/_new_problem (6.5ms)
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://localhost/problems/21]
+
+
+Processing ProjectsController#index (for 127.0.0.1 at 2011-06-24 17:16:30) [GET]
+  [4;35;1mProject Load (0.8ms)[0m   [0mSELECT * FROM "projects" [0m
+Rendering template within layouts/projects
+Rendering projects/index
+Completed in 81ms (View: 13, DB: 1) | 200 OK [http://localhost/projects]
